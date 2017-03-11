@@ -19,7 +19,11 @@ public class CurrencyTest {
         assertThat(currency.exchange("USD",10.0,"THB"),closeTo(330.0,0.001));
         assertThat(currency.exchange("EUR",100.0,"USD"),closeTo(99.009,0.001));
         assertThat(currency.exchange("USD",10.0,"EUR"),closeTo(10.1,0.001));
+<<<<<<< HEAD
         assertThat(currency.exchange("USD",10.0,"JPY"),closeTo(Double.NaN,0.001));
 
+=======
+        assertThat(currency.exchange("SGD",100.0,"USD"),closeTo(Double.NaN,0.001));
+>>>>>>> 83cb2535a93e26cce3b5377c17c03269366592ec
     }
 }
