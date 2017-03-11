@@ -5,6 +5,11 @@ package utility;
  */
 public class GradeCalculator {
     public char calculate(double... scores){
-        return '\0';
+        double totalScore=scores[0]+scores[1]+scores[2];
+        char grade='\0';
+        if(totalScore<=80&&totalScore>60) {
+            grade = 'C';
+        }else grade='F';
+        return grade;
     }
 }
