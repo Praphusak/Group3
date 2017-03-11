@@ -4,24 +4,28 @@ package utility;
  * Created by CHEULONG on 3/11/2017.
  */
 public class Currency {
-<<<<<<< HEAD
+
     public double exchange(String sourceCurrrency,double amount,String targetCurrency) {
         double exchangeCurrency=0.0;
-
+        if(!sourceCurrrency.equalsIgnoreCase("USD")&&(!targetCurrency.equalsIgnoreCase("USD"))){
+            if(sourceCurrrency.equalsIgnoreCase("THB")){
+                exchangeCurrency=(amount/33)*1.01;
+            }else exchangeCurrency=(amount/1.01)*33;
+        }
     // target currency is THB
-        if(targetCurrency.equalsIgnoreCase("THB")){
+       else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("THB")){
         exchangeCurrency=amount*33;
         // target currency is EUR
-    }else exchangeCurrency=amount*1.01;
-=======
-    public double exchange(String sourceCurrrency,double amount,String targetCurrency){
-        double exchangeCurrency=0.0;
+    }else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("EUR"))exchangeCurrency=amount*1.01;
+
         // source currency is THB
-        if(sourceCurrrency.equalsIgnoreCase("THB")){
+       else if(sourceCurrrency.equalsIgnoreCase("THB")&&(targetCurrency.equalsIgnoreCase("USD"))){
            exchangeCurrency=amount/33;
             // source currency is EUR
-        }else exchangeCurrency=amount/1.01;
->>>>>>> e825af2d6faeeb35738cd6cc039344abdffa8ec4
+        }else if (sourceCurrrency.equalsIgnoreCase("EUR")&&(targetCurrency.equalsIgnoreCase("USD")))exchangeCurrency=amount/1.01;
         return exchangeCurrency;
+
     }
-}
+
+    }
+
