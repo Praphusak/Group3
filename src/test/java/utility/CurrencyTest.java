@@ -15,16 +15,10 @@ public class CurrencyTest {
         // paramether)).you may fix the second parameter
         //the first parameter of the closeTo is the value which will be check
         // the return value of the exchange method
-<<<<<<< HEAD
 
-        assertThat(currency.exchange("USD",10.0,"USD"),closeTo(330.0,0.001));
-        assertThat(currency.exchange("EUR",100.0,"USD"),closeTo(99.0,0.001));
-        assertThat(currency.exchange("USD",10.0,"EUR"),closeTo(10.1,0.001));
-=======
-        assertThat(currency.exchange("USD",10.0,"USD"),closeTo(330.0,0.001));
-        assertThat(currency.exchange("EUR",100.0,"USD"),closeTo(99.0,0.001));
+        assertThat(currency.exchange("USD",10.0,"THB"),closeTo(330.0,0.001));
+        assertThat(currency.exchange("EUR",100.0,"USD"),closeTo(99.009,0.001));
         assertThat(currency.exchange("USD",10.0,"EUR"),closeTo(10.1,0.001));
 
->>>>>>> e825af2d6faeeb35738cd6cc039344abdffa8ec4
     }
 }
