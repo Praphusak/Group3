@@ -4,50 +4,43 @@ package utility;
  * Created by CHEULONG on 3/11/2017.
  */
 public class Currency {
-<<<<<<< HEAD
-=======
 
->>>>>>> 88743b2d7824599ede644254938f9f3682599590
-    public double exchange(String sourceCurrrency,double amount,String targetCurrency) {
-        double exchangeCurrency=0.0;
-        if(!sourceCurrrency.equalsIgnoreCase("USD")&&(!targetCurrency.equalsIgnoreCase("USD"))){
-            if(sourceCurrrency.equalsIgnoreCase("THB")){
-                exchangeCurrency=(amount/33)*1.01;
-            }else exchangeCurrency=(amount/1.01)*33;
-        }
-<<<<<<< HEAD
-        // target currency is THB
-        else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("THB")){
-            exchangeCurrency=amount*33;
+    public double exchange(String sourceCurrrency, double amount, String targetCurrency) {
+        double exchangeCurrency = 0.0;
+        if (!sourceCurrrency.equalsIgnoreCase("USD") && (!targetCurrency.equalsIgnoreCase("USD"))) {
+            if (sourceCurrrency.equalsIgnoreCase("THB")) {
+                exchangeCurrency = (amount / 33) * 1.01;
+            } else exchangeCurrency = (amount / 1.01) * 33;
+        } else if (sourceCurrrency.equalsIgnoreCase("USD") && targetCurrency.equalsIgnoreCase("THB")) {
+            exchangeCurrency = amount * 33;
             // target currency is EUR
-        }else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("EUR"))exchangeCurrency=amount*1.01;
+        } else if (sourceCurrrency.equalsIgnoreCase("USD") && targetCurrency.equalsIgnoreCase("EUR"))
+            exchangeCurrency = amount * 1.01;
 
             // source currency is THB
-        else if(sourceCurrrency.equalsIgnoreCase("THB")&&(targetCurrency.equalsIgnoreCase("USD"))){
-            exchangeCurrency=amount/33;
-=======
-    // target currency is THB
-       else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("THB")){
-        exchangeCurrency=amount*33;
-        // target currency is EUR
-    }else if(sourceCurrrency.equalsIgnoreCase("USD")&&targetCurrency.equalsIgnoreCase("EUR"))exchangeCurrency=amount*1.01;
+        else if (sourceCurrrency.equalsIgnoreCase("THB") && (targetCurrency.equalsIgnoreCase("USD")))
+            exchangeCurrency = amount / 33;
 
-        // source currency is THB
-       else if(sourceCurrrency.equalsIgnoreCase("THB")&&(targetCurrency.equalsIgnoreCase("USD"))){
-           exchangeCurrency=amount/33;
->>>>>>> 88743b2d7824599ede644254938f9f3682599590
-            // source currency is EUR
-        }else if (sourceCurrrency.equalsIgnoreCase("EUR")&&(targetCurrency.equalsIgnoreCase("USD")))exchangeCurrency=amount/1.01;
-        return exchangeCurrency;
+            // target currency is THB
+       else if (sourceCurrrency.equalsIgnoreCase("USD") && targetCurrency.equalsIgnoreCase("THB")) {
+                exchangeCurrency = amount * 33;
+                // target currency is EUR
+            } else if (sourceCurrrency.equalsIgnoreCase("USD") && targetCurrency.equalsIgnoreCase("EUR"))
+                exchangeCurrency = amount * 1.01;
 
-<<<<<<< HEAD
+                // source currency is THB
+            else if (sourceCurrrency.equalsIgnoreCase("THB") && (targetCurrency.equalsIgnoreCase("USD"))) {
+                exchangeCurrency = amount / 33;
+
+                // source currency is EUR
+            } else if (sourceCurrrency.equalsIgnoreCase("EUR") && (targetCurrency.equalsIgnoreCase("USD")))
+                exchangeCurrency = amount / 1.01;
+            return exchangeCurrency;
+
+
+        }
+
     }
 
 }
 
-=======
-    }
-
-    }
-
->>>>>>> 88743b2d7824599ede644254938f9f3682599590
