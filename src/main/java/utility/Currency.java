@@ -50,6 +50,7 @@ public class Currency {
             // source currency is EUR
         } else if (sourceCurrrency.equalsIgnoreCase("EUR") && (targetCurrency.equalsIgnoreCase("USD")))
             exchangeCurrency = amount / 1.01;
+        else exchangeCurrency=Double.NaN;
         return exchangeCurrency;
 
 
